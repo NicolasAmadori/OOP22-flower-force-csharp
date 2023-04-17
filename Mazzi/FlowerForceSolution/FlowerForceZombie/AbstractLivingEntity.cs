@@ -6,9 +6,9 @@ namespace FlowerForceZombie
     public abstract class AbstractLivingEntity : AbstractEntity, ILivingEntity
     {
         public int Health { get; private set; }
-        protected Timer Timer { get; }
+        protected MyTimer Timer { get; }
 
-        protected AbstractLivingEntity(PointF position, Timer timer, int health, string name) : base(position, name)
+        protected AbstractLivingEntity(PointF position, MyTimer timer, int health, string name) : base(position, name)
         {
             Health = health;
             Timer = timer;

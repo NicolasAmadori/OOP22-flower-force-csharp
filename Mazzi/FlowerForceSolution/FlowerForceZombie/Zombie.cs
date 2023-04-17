@@ -10,7 +10,7 @@ namespace FlowerForceZombie
         private const int EatWaitingSecs = 1;
         static private readonly int FreezeWaitingTicks = RenderingInformation.ConvertSecondsToCycles(FreezeWaitingSecs);
         static private readonly int EatWaitingTicks = RenderingInformation.ConvertSecondsToCycles(EatWaitingSecs);
-        private readonly Timer _freezeTimer;
+        private readonly ITimer _freezeTimer;
         private readonly int _damage;
         private bool _isFrozen;
         private bool _canBite;
@@ -19,11 +19,11 @@ namespace FlowerForceZombie
         public double Delta { get; private set; }
 
         public Zombie(double defaultDelta, int damage, int health, PointF position, int difficulty,
-            string zombieName) : base(position, new Timer(EatWaitingTicks), health, zombieName)
+            string zombieName) : base(position, new MyTimer(EatWaitingTicks), health, zombieName)
         {
             _defaultDelta = defaultDelta;
             _damage = damage;
-            _freezeTimer = new Timer(FreezeWaitingTicks);
+            _freezeTimer = new MyTimer(FreezeWaitingTicks);
             Difficulty = difficulty;
             _isFrozen = false;
             _canBite = true;

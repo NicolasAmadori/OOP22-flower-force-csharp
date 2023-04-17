@@ -1,14 +1,13 @@
-﻿using System;
-
+﻿
 namespace Others
 {
-    public class Timer : ITimer
+    public class MyTimer : ITimer
     {
         public bool Ready { get; private set; }
         private int _nCycles;
         private int _timerCyclesCount;
 
-        public Timer(int nCycles)
+        public MyTimer(int nCycles)
         {
             VerifyNCycles(nCycles);
             _nCycles = nCycles;
