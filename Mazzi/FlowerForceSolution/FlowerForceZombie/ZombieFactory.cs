@@ -14,8 +14,8 @@ namespace FlowerForceZombie
         private const int GargantuarHealth = 4000;
         private const int GargantuarDamage = 10_000;
         private const double BasicSecsPerCell = 4.7;
-        static private readonly double BasicDelta = RenderingInformation.GetDeltaFromSecondsPerCell(BasicSecsPerCell);
-        static private readonly double RunningDelta = 2 * BasicDelta;
+        static private readonly float BasicDelta = RenderingInformation.GetDeltaFromSecondsPerCell(BasicSecsPerCell);
+        static private readonly float RunningDelta = 2 * BasicDelta;
         private const int BasicDifficulty = 1;
         private const int ConeheadDifficulty = 2;
         private const int RunningDifficulty = 3;

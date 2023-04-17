@@ -14,11 +14,11 @@ namespace FlowerForceZombie
         private readonly int _damage;
         private bool _isFrozen;
         private bool _canBite;
-        private double _defaultDelta;
+        private float _defaultDelta;
         public int Difficulty { get; }
-        public double Delta { get; private set; }
+        public float Delta { get; private set; }
 
-        public Zombie(double defaultDelta, int damage, int health, PointF position, int difficulty,
+        public Zombie(float defaultDelta, int damage, int health, PointF position, int difficulty,
             string zombieName) : base(position, new MyTimer(EatWaitingTicks), health, zombieName)
         {
             _defaultDelta = defaultDelta;
@@ -84,9 +84,9 @@ namespace FlowerForceZombie
             }
         }
 
-        protected void ChangeVelocity(double accelerationFactor)
+        protected void ChangeVelocity(float accelerationFactor)
         {
-            double newDelta = Delta * accelerationFactor;
+            float newDelta = Delta * accelerationFactor;
             int newNumCycles = RenderingInformation.ConvertSecondsToCycles(EatWaitingSecs / accelerationFactor);
             Delta = _isFrozen ? newDelta / FreezeFactor : newDelta;
             _defaultDelta = newDelta;

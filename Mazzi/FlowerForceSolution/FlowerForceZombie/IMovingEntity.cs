@@ -5,6 +5,6 @@ namespace FlowerForceZombie
     {
         void Move();
 
-        double Delta { get; }
+        float Delta { get; }
     }
 }

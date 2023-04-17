@@ -8,7 +8,7 @@ namespace FlowerForceZombie
         private readonly int _criticalHealth;
         private bool _isRunning;
 
-        public NewspaperZombie(double defaultDelta, int damage, int health, PointF position, int newspaperHealth, 
+        public NewspaperZombie(float defaultDelta, int damage, int health, PointF position, int newspaperHealth, 
                 int difficulty, string zombieName) : base(defaultDelta, damage,
                     health + newspaperHealth, position, difficulty, zombieName)
         {
