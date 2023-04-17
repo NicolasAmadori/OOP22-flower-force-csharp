@@ -2,7 +2,7 @@
 
 namespace FlowerForceZombie
 {
-    class EntityInfo : IEntityInfo
+    public class EntityInfo : IEntityInfo
     {
         public string Name { get; }
         public PointF Position { get; set; }

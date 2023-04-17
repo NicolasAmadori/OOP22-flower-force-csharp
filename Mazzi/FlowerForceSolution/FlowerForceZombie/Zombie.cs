@@ -93,6 +93,6 @@ namespace FlowerForceZombie
             Timer.SetNumCycles(_isFrozen ? newNumCycles * FreezeFactor : newNumCycles);
         }
 
-        public void Move() => Position = new PointF(Position.X - (float) Delta, Position.Y);
+        public void Move() => SetPosition(new PointF(Position.X - Delta, Position.Y));
     }
 }

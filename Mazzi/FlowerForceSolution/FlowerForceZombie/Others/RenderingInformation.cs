@@ -5,7 +5,6 @@ namespace Others
     {
         public const int FramesPerSecond = 30;
 
-        //TODO: use YardInfo
         public static float GetDeltaFromSecondsPerCell(double secondsPerCell)
             => YardInfo.Cell.Width / ConvertSecondsToCycles(secondsPerCell);
 
