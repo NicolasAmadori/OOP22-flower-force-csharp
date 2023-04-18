@@ -3,6 +3,9 @@ using System.Drawing;
 
 namespace FlowerForceZombie
 {
+    /// <summary>
+    /// Implementation of <see cref="IZombie"/>
+    /// </summary>
     public class Zombie : AbstractLivingEntity, IZombie
     {
         private const int FreezeFactor = 2;
@@ -15,9 +18,17 @@ namespace FlowerForceZombie
         private bool _isFrozen;
         private bool _canBite;
         private float _defaultDelta;
-        public int Difficulty { get; }
-        public float Delta { get; private set; }
 
+        /// <summary>
+        /// Creates a new zombie
+        /// </summary>
+        /// <param name="defaultDelta"> is the space traveled by the zombie every move update </param>
+        /// <param name="damage"> given by the zombie </param>
+        /// <param name="health"> of the zombie </param>
+        /// <param name="position"> of the zombie </param>
+        /// <param name="difficulty"> the generic difficulty of the zombie </param>
+        /// <param name="zombieName"> the name of the zombie </param>
+        /// <returns></returns>
         public Zombie(float defaultDelta, int damage, int health, PointF position, int difficulty,
             string zombieName) : base(position, new MyTimer(EatWaitingTicks), health, zombieName)
         {
@@ -30,6 +41,13 @@ namespace FlowerForceZombie
             Delta = defaultDelta;
         }
 
+        /// <inheritdoc />
+        public int Difficulty { get; }
+
+        /// <inheritdoc />
+        public float Delta { get; private set; }
+
+        /// <inheritdoc />
         public override void UpdateState()
         {
             if (_isFrozen)
@@ -50,6 +68,7 @@ namespace FlowerForceZombie
             }
         }
 
+        /// <inheritdoc />
         public void Freeze()
         {
             _freezeTimer.Reset();
@@ -61,6 +80,7 @@ namespace FlowerForceZombie
             }
         }
 
+        /// <inheritdoc />
         public bool ManageEating(IPlant plant)
         {
             if (_canBite)
@@ -73,6 +93,7 @@ namespace FlowerForceZombie
             return false;
         }
 
+        /// <inheritdoc />
         public void WarmUp()
         {
             if (_isFrozen)
@@ -84,6 +105,11 @@ namespace FlowerForceZombie
             }
         }
 
+        /// <summary>
+        /// This method can be called by subtypes to change 
+        /// the total velocity of the zombie (i.e its moving and eating velocity)
+        /// </summary>
+        /// <param name="accelerationFactor"> used to change zombie velocity </param>
         protected void ChangeVelocity(float accelerationFactor)
         {
             float newDelta = Delta * accelerationFactor;
@@ -93,6 +119,7 @@ namespace FlowerForceZombie
             Timer.SetNumCycles(_isFrozen ? newNumCycles * FreezeFactor : newNumCycles);
         }
 
+        /// <inheritdoc />
         public void Move() => SetPosition(new PointF(Position.X - Delta, Position.Y));
     }
 }
