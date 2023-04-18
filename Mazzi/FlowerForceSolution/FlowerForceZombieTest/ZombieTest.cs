@@ -1,5 +1,8 @@
 namespace FlowerForceZombieTest;
 
+/// <summary>
+/// Test for classes implementing <see cref="IZombie"/>.
+/// </summary>
 [TestClass]
 public class ZombieTest
 {
@@ -11,6 +14,9 @@ public class ZombieTest
     private IZombie _zombie = ZombieFactory.Basic(new PointF(InitialX, InitialY));
     private IZombie _newspaper = ZombieFactory.Newspaper(new PointF(InitialX, InitialY));
 
+    /// <summary>
+    /// Setup before each test.
+    /// </summary>
     [TestInitialize]
     public void Setup() 
     {
@@ -18,6 +24,9 @@ public class ZombieTest
         _newspaper = ZombieFactory.Newspaper(new PointF(InitialX, InitialY));
     }
 
+    /// <summary>
+    /// Test the <see cref="IMovingEntity.Move"/> in zombies.
+    /// </summary>
     [TestMethod]
     public void TestMove()
     {
@@ -33,6 +42,9 @@ public class ZombieTest
         Assert.AreEqual(new PointF(expectedPosX, InitialY), _zombie.Position);
     }
 
+    /// <summary>
+    /// Test the <see cref="IZombie.Freeze"/>.
+    /// </summary>
     [TestMethod]
     public void TestFreeze() 
     {
@@ -51,6 +63,9 @@ public class ZombieTest
         Assert.AreEqual(initialDelta, _zombie.Delta);
     }
 
+    /// <summary>
+    /// Test the <see cref="ILivingEntity.ReceiveDamage(int)"/> in zombies.
+    /// </summary>
     [TestMethod]
     public void TestReceiveDamage() 
     {
@@ -64,6 +79,9 @@ public class ZombieTest
         Assert.AreEqual(expectedHealth, _zombie.Health);
     }
 
+    /// <summary>
+    /// Test the <see cref="NewspaperZombie"/>.
+    /// </summary>
     [TestMethod]
     public void TestNewspaper()
     {
