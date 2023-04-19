@@ -1,6 +1,6 @@
 ﻿namespace FlowerForce
 {
-    public class ShootingPlantImpl : AbstractPlant, IShootingPlant
+    public class ShootingPlant : AbstractPlant, IShootingPlant
     {
         private readonly Func<IBullet> _bulletProducer;
         private bool _canShoot;
@@ -14,9 +14,9 @@
         /// <param name="cost">plant's cost</param>
         /// <param name="rechargeTime">plant's recharge time</param>
         /// <param name="plantName">plant's name</param>
-        public ShootingPlantImpl(
+        public ShootingPlant(
             Tuple<double, double> pos,
-            Timer timer,
+            MyTimer timer,
             int health,
             Func<IBullet> bulletProducer,
             int cost,

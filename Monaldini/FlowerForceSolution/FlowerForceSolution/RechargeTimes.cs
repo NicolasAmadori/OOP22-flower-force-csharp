@@ -10,7 +10,7 @@
         /// </summary>
         public static int FastRechargeTime
         {
-            get => RenderingInformations.ConvertSecondsToCycles(7.5);
+            get => RenderingInformation.ConvertSecondsToCycles(7.5);
         }
 
         /// <summary>
@@ -18,7 +18,7 @@
         /// </summary>
         public static int SlowRechargeTime
         {
-            get => RenderingInformations.ConvertSecondsToCycles(30);
+            get => RenderingInformation.ConvertSecondsToCycles(30);
         }
 
         /// <summary>
@@ -26,7 +26,7 @@
         /// </summary>
         public static int VerySlowRechargeTime
         {
-            get => RenderingInformations.ConvertSecondsToCycles(50);
+            get => RenderingInformation.ConvertSecondsToCycles(50);
         }
     }
 }

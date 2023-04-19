@@ -7,15 +7,7 @@ namespace FlowerForce
     /// </summary>
     public abstract class AbstractEntity : IEntity
     {
-        /// <summary>
-        /// </summary>
-        /// <param name="pos">The position of the entity</param>
-        /// <param name="name">The name of the entity</param>
-        protected AbstractEntity(Tuple<double, double> pos, String name)
-        {
-            Name = name;
-            Position = pos;
-        }
+
 
         /// <inheritdoc />
         public Tuple<double, double> Position { get; protected set; }
@@ -25,6 +17,16 @@ namespace FlowerForce
 
         /// <inheritdoc />
         public abstract bool Over { get; }
+
+        /// <summary>
+        /// </summary>
+        /// <param name="pos">The position of the entity</param>
+        /// <param name="name">The name of the entity</param>
+        protected AbstractEntity(Tuple<double, double> pos, String name)
+        {
+            Name = name;
+            Position = pos;
+        }
 
     }
 }

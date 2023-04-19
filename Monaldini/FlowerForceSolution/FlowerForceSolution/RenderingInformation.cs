@@ -10,7 +10,7 @@ namespace FlowerForce
     /// <summary>
     /// Utility class to get the rendering information.
     /// </summary>
-    public static class RenderingInformations
+    public static class RenderingInformation
     {
         /// <summary>
         /// Frames per second the game must be set to.

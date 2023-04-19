@@ -25,7 +25,7 @@ namespace FlowerForce
         /// <param name="cost">plant's cost</param>
         /// <param name="rechargeTime">plant's recharge time</param>
         /// <param name="plantName">plant's name</param>
-        public AbstractPlant(Tuple<double, double> pos, Timer timer, int health, int cost, int rechargeTime, string plantName) : base(pos, timer, health, plantName)
+        public AbstractPlant(Tuple<double, double> pos, MyTimer timer, int health, int cost, int rechargeTime, string plantName) : base(pos, timer, health, plantName)
         {
             Cost = cost;
             RechargeTime = rechargeTime;

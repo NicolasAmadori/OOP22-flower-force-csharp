@@ -39,7 +39,7 @@ namespace FlowerForce
         {
             _damage = damage;
             _action = action;
-            Delta = RenderingInformations.GetDeltaFromSecondsPerCell(SecsPerCell);
+            Delta = RenderingInformation.GetDeltaFromSecondsPerCell(SecsPerCell);
         }
 
         /// <inheritdoc />

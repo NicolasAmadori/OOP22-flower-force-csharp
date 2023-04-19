@@ -8,7 +8,7 @@ namespace FlowerForce
     public abstract class AbstractLivingEntity : AbstractEntity, ILivingEntity
     {
 
-        protected Timer Timer { get; }
+        protected MyTimer Timer { get; }
         public int Health { get; private set; }
 
         /// <summary>
@@ -17,7 +17,11 @@ namespace FlowerForce
         /// <param name="timer">used to produce bullets/suns at the right time</param>
         /// <param name="health">the starting health of the entity</param>
         /// <param name="entityName">the name of the entity</param>
-        protected AbstractLivingEntity(Tuple<double, double> pos, Timer timer, int health, string entityName) : base(pos, entityName) => Timer = timer; 
+        protected AbstractLivingEntity(Tuple<double, double> pos, MyTimer timer, int health, string entityName) : base(pos, entityName)
+        {
+            Timer = timer;
+            Health = health;
+        }
 
         /// <inheritdoc />
         public void ReceiveDamage(int damage) => Health -= damage;

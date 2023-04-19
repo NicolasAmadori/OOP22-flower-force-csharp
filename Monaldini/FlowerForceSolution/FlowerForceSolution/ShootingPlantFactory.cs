@@ -13,7 +13,7 @@ namespace FlowerForce
     {
         private const double StandardSecsShootingTime = 1.425;
         private static int StandardShootingTime = (int) (
-            StandardSecsShootingTime * RenderingInformations.FramesPerSecond);
+            StandardSecsShootingTime * RenderingInformation.FramesPerSecond);
         private const int StandardShooterHealth = 300;
         private const int StrongShooterHealth = StandardShooterHealth / 10;
 
@@ -29,9 +29,9 @@ namespace FlowerForce
         /// <param name="pos">the position where to place it</param>
         /// <returns>a Pea Shooter Plant</returns>
         public static IShootingPlant CreatePeaShooter(Tuple<double, double> pos)
-            => new ShootingPlantImpl(
+            => new ShootingPlant(
                 pos,
-                new Timer(StandardShootingTime),
+                new MyTimer(StandardShootingTime),
                 StandardShooterHealth,
                 () => BulletFactory.CreateStandardBullet(pos),
                 CommonShooterCost,
@@ -44,9 +44,9 @@ namespace FlowerForce
         /// <param name="pos">the position where to place it</param>
         /// <returns>a Fire Shooter Plant</returns>
         public static IShootingPlant CreateFireShooter(Tuple<double, double> pos)
-            => new ShootingPlantImpl(
+            => new ShootingPlant(
                 pos,
-                new Timer(StandardShootingTime),
+                new MyTimer(StandardShootingTime),
                 StandardShooterHealth,
                 () => BulletFactory.CreateFireBullet(pos),
                 FireShooterCost,
@@ -59,9 +59,9 @@ namespace FlowerForce
         /// <param name="pos">the position where to place it</param>
         /// <returns>a Snow Shooter Plant</returns>
         public static IShootingPlant CreateSnowShooter(Tuple<double, double> pos)
-            => new ShootingPlantImpl(
+            => new ShootingPlant(
                 pos,
-                new Timer(StandardShootingTime),
+                new MyTimer(StandardShootingTime),
                 StandardShooterHealth,
                 () => BulletFactory.CreateSnowBullet(pos),
                 SnowShooterCost,
@@ -74,9 +74,9 @@ namespace FlowerForce
         /// <param name="pos">the position where to place it</param>
         /// <returns>a Fast Shooter Plant</returns>
         public static IShootingPlant CreateFastShooter(Tuple<double, double> pos)
-            => new ShootingPlantImpl(
+            => new ShootingPlant(
                 pos,
-                new Timer(StandardShootingTime / 2),
+                new MyTimer(StandardShootingTime / 2),
                 StandardShooterHealth,
                 () => BulletFactory.CreateStandardBullet(pos),
                 FastShooterCost,
@@ -89,9 +89,9 @@ namespace FlowerForce
         /// <param name="pos">the position where to place it</param>
         /// <returns>a Strong Shooter Plant</returns>
         public static IShootingPlant CreateStrongShooter(Tuple<double, double> pos)
-            => new ShootingPlantImpl(
+            => new ShootingPlant(
                 pos,
-                new Timer(StandardShootingTime * 10),
+                new MyTimer(StandardShootingTime * 10),
                 StrongShooterHealth,
                 () => BulletFactory.CreateStrongBullet(pos),
                 StrongShooterCost,
