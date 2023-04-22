@@ -43,8 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GameLoop.cs" />
+    <Compile Include="IGameLoop.cs" />
     <Compile Include="IPlayer.cs" />
     <Compile Include="IShop.cs" />
+    <Compile Include="Others\IGame.cs" />
+    <Compile Include="Others\IGameEngine.cs" />
     <Compile Include="Others\IPlant.cs" />
     <Compile Include="Others\IPlantInfo.cs" />
     <Compile Include="Others\PlantInfo.cs" />
