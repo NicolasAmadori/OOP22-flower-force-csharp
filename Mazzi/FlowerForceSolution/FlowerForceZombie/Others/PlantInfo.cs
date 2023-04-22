@@ -1,5 +1,5 @@
 
-namespace FlowerForceZombie
+namespace Others
 {
     /// <summary>
     /// Implementation of <see cref="IPlantInfo"/>
