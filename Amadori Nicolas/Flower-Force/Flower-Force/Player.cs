@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Flower_Force
 {
@@ -70,7 +67,7 @@ namespace Flower_Force
         }
 
         /// <inheritdoc />
-        void IPlayer.AddCoins(int nCoins)
+        public void IPlayer.AddCoins(int nCoins)
         {
             if (nCoins < 0)
             {
@@ -80,7 +77,7 @@ namespace Flower_Force
         }
 
         /// <inheritdoc />
-        void IPlayer.AddNewScore(int score)
+        public void IPlayer.AddNewScore(int score)
         {
             if (score < 0)
             {
@@ -90,7 +87,7 @@ namespace Flower_Force
         }
 
         /// <inheritdoc />
-        void IPlayer.AddPlant(int plantIndex)
+        public void IPlayer.AddPlant(int plantIndex)
         {
             if (plantIndex < 0)
             {
@@ -100,7 +97,7 @@ namespace Flower_Force
         }
 
         /// <inheritdoc />
-        bool IPlayer.SubtractCoins(int nCoins)
+        public bool IPlayer.SubtractCoins(int nCoins)
         {
             if(nCoins < 0)
             {
@@ -116,9 +113,6 @@ namespace Flower_Force
         }
 
         /// <inheritdoc />
-        void IPlayer.UnlockedNextLevel()
-        {
-            LastUnlockedLevelId++;
-        }
+        public void IPlayer.UnlockedNextLevel() => LastUnlockedLevelId++;
     }
 }
