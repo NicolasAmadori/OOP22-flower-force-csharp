@@ -43,7 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller.cs" />
     <Compile Include="GameLoop.cs" />
+    <Compile Include="IController.cs" />
     <Compile Include="IGameLoop.cs" />
     <Compile Include="IPlayer.cs" />
     <Compile Include="IShop.cs" />
@@ -51,7 +53,9 @@
     <Compile Include="Others\IGameEngine.cs" />
     <Compile Include="Others\IPlant.cs" />
     <Compile Include="Others\IPlantInfo.cs" />
+    <Compile Include="Others\IWorld.cs" />
     <Compile Include="Others\PlantInfo.cs" />
+    <Compile Include="Others\World.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
