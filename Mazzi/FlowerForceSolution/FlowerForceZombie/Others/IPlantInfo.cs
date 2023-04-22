@@ -1,5 +1,5 @@
 
-namespace FlowerForceZombie 
+namespace Others 
 {
     /// <summary>
     /// Models the info that must be saved about a plant in order to identify its type in maps.
