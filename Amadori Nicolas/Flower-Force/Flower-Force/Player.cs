@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace Flower_Force
 {
     /// <summary>
-    /// This is an implementation of <see cref="Player"/>.
+    /// This is an implementation of <see cref="IPlayer"/>.
     /// </summary>
     public class Player : IPlayer
     {
@@ -67,7 +67,7 @@ namespace Flower_Force
         }
 
         /// <inheritdoc />
-        public void IPlayer.AddCoins(int nCoins)
+        public void AddCoins(int nCoins)
         {
             if (nCoins < 0)
             {
@@ -77,7 +77,7 @@ namespace Flower_Force
         }
 
         /// <inheritdoc />
-        public void IPlayer.AddNewScore(int score)
+        public void AddNewScore(int score)
         {
             if (score < 0)
             {
@@ -87,7 +87,7 @@ namespace Flower_Force
         }
 
         /// <inheritdoc />
-        public void IPlayer.AddPlant(int plantIndex)
+        public void AddPlant(int plantIndex)
         {
             if (plantIndex < 0)
             {
@@ -97,7 +97,7 @@ namespace Flower_Force
         }
 
         /// <inheritdoc />
-        public bool IPlayer.SubtractCoins(int nCoins)
+        public bool SubtractCoins(int nCoins)
         {
             if(nCoins < 0)
             {
@@ -113,6 +113,6 @@ namespace Flower_Force
         }
 
         /// <inheritdoc />
-        public void IPlayer.UnlockedNextLevel() => LastUnlockedLevelId++;
+        public void UnlockedNextLevel() => LastUnlockedLevelId++;
     }
 }
