@@ -1,10 +1,16 @@
 ﻿namespace FlowerForceTest
 {
+    /// <summary>
+    /// Test class for <see cref="IBullet"/> instances.
+    /// </summary>
     [TestClass]
     public class TestBullet
     {
         private readonly IBullet _bullet = BulletFactory.CreateStandardBullet(Tuple.Create(0.0, 0.0));
 
+        /// <summary>
+        /// Tests bulllet's movement.
+        /// </summary>
         [TestMethod]
         public void TestMove()
         {

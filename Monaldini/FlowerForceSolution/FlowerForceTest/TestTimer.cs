@@ -1,17 +1,26 @@
 namespace FlowerForceTest
 {
+    /// <summary>
+    /// Test class for <see cref="ITimer"/> instances.
+    /// </summary>
     [TestClass]
     public class TestTimer
     {
         private const int NumberOfCycles = 60;
         private ITimer _timer = new MyTimer(NumberOfCycles); 
 
+        /// <summary>
+        /// Sets up testing.
+        /// </summary>
         [TestInitialize]
         public void SetUp()
         {
             _timer = new MyTimer(NumberOfCycles);
         }
 
+        /// <summary>
+        /// Tests Ready property's logic.
+        /// </summary>
         [TestMethod]
         public void TestReady()
         {
@@ -26,6 +35,9 @@ namespace FlowerForceTest
             Assert.IsFalse(_timer.Ready);
         }
 
+        /// <summary>
+        /// Tests Reset() logic.
+        /// </summary>
         [TestMethod]
         public void TestReset()
         {
@@ -44,6 +56,9 @@ namespace FlowerForceTest
             Assert.IsTrue(_timer.Ready);
         }
 
+        /// <summary>
+        /// Tests NCycles property's logic.
+        /// </summary>
         [TestMethod]
         public void TestSetNCycles()
         {

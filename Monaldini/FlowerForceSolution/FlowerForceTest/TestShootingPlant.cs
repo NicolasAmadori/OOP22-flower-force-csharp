@@ -1,5 +1,8 @@
 ﻿namespace FlowerForceTest
 {
+    /// <summary>
+    /// Test class for <see cref="IShootingPlant"/> instances.
+    /// </summary>
     [TestClass]
     public class TestShootingPlant
     {
@@ -8,6 +11,9 @@
 
         private readonly IShootingPlant _peaShooter = ShootingPlantFactory.CreatePeaShooter(Tuple.Create(0.0, 0.0));
 
+        /// <summary>
+        /// Tests damage reception.
+        /// </summary>
         [TestMethod]
         public void TestReceiveDamage()
         {
@@ -21,6 +27,9 @@
             }
         }
 
+        /// <summary>
+        /// Tests shooting logic.
+        /// </summary>
         [TestMethod]
         public void TestShooting()
         {
