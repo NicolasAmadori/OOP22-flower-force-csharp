@@ -34,7 +34,7 @@ namespace FlowerForce
         }
 
         /// <inheritdoc />
-        public Zombie creationZombie(int delta)
+        public Zombie ZombieCreation(int delta)
         {
             var zombieToSpawn = _zombies.Where(
                 z => z(TemporaryPosition).Difficulty <= _levelZombieToSpawn).ToHashSet();
@@ -60,7 +60,7 @@ namespace FlowerForce
         }
 
         /// <inheritdoc />
-        public void increaseLevelZombieToSpawn()
+        public void IncreaseLevelZombieToSpawn()
         {
             if (_levelZombieToSpawn < _zombieMaxDifficulty)
             {

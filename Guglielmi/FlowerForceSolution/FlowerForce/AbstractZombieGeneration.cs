@@ -70,7 +70,7 @@ namespace FlowerForce
                         _incrementableHorde = true;
                         _generatedZombie = 0;
                         _hordeGeneratedZombie = 0;
-                        _genZombie.increaseLevelZombieToSpawn();
+                        _genZombie.IncreaseLevelZombieToSpawn();
                     }
                     else
                     {
@@ -81,7 +81,7 @@ namespace FlowerForce
                 {
                     _generatedZombie++;
                 }
-                return _genZombie.creationZombie(_hordeZombie / _startNumberZombieHorde);
+                return _genZombie.ZombieCreation(_hordeZombie / _startNumberZombieHorde);
             }
             return null;
         }

@@ -12,11 +12,11 @@ namespace FlowerForce
         /// </summary>
         /// <param name="delta"> used to manage the probability of spawning the various zombies </param>
         /// <returns> the spawned zombie </returns>
-        Zombie creationZombie(int delta);
+        Zombie ZombieCreation(int delta);
 
         /// <summary>
         /// Used to increase the zombie level possible to spawn.
         /// </summary>
-        void increaseLevelZombieToSpawn();
+        void IncreaseLevelZombieToSpawn();
     }
 }
