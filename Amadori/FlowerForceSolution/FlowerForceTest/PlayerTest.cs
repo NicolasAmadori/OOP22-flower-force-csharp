@@ -1,10 +1,12 @@
-﻿namespace FlowerForceTest;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+namespace FlowerForceTest;
 
 /// <summary>
 /// Test for class <see cref="Player"/>.
 /// </summary>
 [TestClass]
-class PlayerTest
+public class PlayerTest
 {
     private const int STARTING_COINS = 0;
     private const int FIRST_SCORE_TO_ADD = 4_000;
