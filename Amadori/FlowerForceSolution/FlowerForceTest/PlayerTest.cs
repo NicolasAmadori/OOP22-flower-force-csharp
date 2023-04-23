@@ -1,6 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace FlowerForceTest;
+﻿namespace FlowerForceTest;
 
 /// <summary>
 /// Test for class <see cref="Player"/>.
