@@ -2,6 +2,9 @@
 
 namespace Others
 {
+    /// <summary>
+    /// This is an implementation of <see cref="IWorld"/>.
+    /// </summary>
     public class World : IWorld
     {
         /// <inheritdoc />

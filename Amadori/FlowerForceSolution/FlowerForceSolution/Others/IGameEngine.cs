@@ -1,5 +1,8 @@
 ﻿namespace Others
 {
+    /// <summary>
+    /// This is the class that represent the graphic engine of the game.
+    /// </summary>
     public interface IGameEngine
     {
         /// <summary>
