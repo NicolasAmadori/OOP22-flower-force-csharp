@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace FlowerForce
+﻿namespace FlowerForce
 {
     /// <summary>
     /// This abstract class implements some aspects common to all <see cref="IPlant"/> objects.

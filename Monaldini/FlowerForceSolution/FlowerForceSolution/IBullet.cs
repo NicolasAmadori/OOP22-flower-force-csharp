@@ -1,5 +1,4 @@
-﻿using System;
-using Others;
+﻿using Others;
 
 namespace FlowerForce
 {
@@ -9,7 +8,7 @@ namespace FlowerForce
     public interface IBullet : IMovingEntity
     {
         /// <summary>
-        /// Callled to hit a zombie.
+        /// Called to hit a zombie.
         /// </summary>
         /// <param name="zombie">the zombie to hit</param>
         void Hit(IZombie zombie);

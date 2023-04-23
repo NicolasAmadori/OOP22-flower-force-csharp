@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace FlowerForce
+﻿namespace FlowerForce
 {
     /// <summary>
-    /// A factory that generates <see cref="IShootingPlant"/>
+    /// A factory that generates <see cref="IShootingPlant"/> instances.
     /// </summary>
     public static class ShootingPlantFactory
     {

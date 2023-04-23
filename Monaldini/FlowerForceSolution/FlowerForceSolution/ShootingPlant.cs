@@ -1,5 +1,8 @@
 ﻿namespace FlowerForce
 {
+    /// <summary>
+    /// This is an implementation of <see cref="IShootingPlant"/>.
+    /// </summary>
     public class ShootingPlant : AbstractPlant, IShootingPlant
     {
         private readonly Func<IBullet> _bulletProducer;

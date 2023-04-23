@@ -7,18 +7,9 @@ namespace Others
     /// </summary>
     public static class YardInfo
     {
-        /// <summary>
-        /// The rows of yard's cells matrix
-        /// </summary>
-        public const int Rows = 5;
-
-        /// <summary>
-        /// The columns of yard's cells matrix
-        /// </summary>
-        public const int Cols = 9;
-
+        private const int Rows = 5;
+        private const int Cols = 9;
         private const float Height = 880f;
-
         private const float Width = 1314f;
 
         /// <summary>

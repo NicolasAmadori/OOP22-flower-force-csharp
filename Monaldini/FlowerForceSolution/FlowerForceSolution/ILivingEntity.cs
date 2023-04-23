@@ -1,5 +1,4 @@
-﻿
-namespace FlowerForce
+﻿namespace FlowerForce
 {
     /// <summary>
     /// Models an in-game <see cref="IEntity"/> with an health associated.

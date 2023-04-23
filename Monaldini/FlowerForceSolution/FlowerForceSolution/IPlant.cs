@@ -1,5 +1,8 @@
 ﻿namespace FlowerForce
 {
+    /// <summary>
+    /// An interface modelling any kind of plants.
+    /// </summary>
     public interface IPlant : ILivingEntity
     {
         /// <summary>

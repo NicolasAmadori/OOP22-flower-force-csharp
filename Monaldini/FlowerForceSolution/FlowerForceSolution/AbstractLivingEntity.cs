@@ -1,6 +1,4 @@
-﻿using System.Drawing;
-
-namespace FlowerForce
+﻿namespace FlowerForce
 {
     /// <summary>
     /// Represents an abstract <see cref="ILivingEntity"/>.

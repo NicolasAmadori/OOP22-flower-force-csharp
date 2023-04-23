@@ -1,6 +1,4 @@
-﻿using System.Drawing;
-
-namespace FlowerForce
+﻿namespace FlowerForce
 {
     /// <summary>
     /// This is an abstract implementation of <see cref="IEntity"/>.

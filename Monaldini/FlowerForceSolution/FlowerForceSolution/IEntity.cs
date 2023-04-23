@@ -1,6 +1,4 @@
-﻿using System.Drawing;
-
-namespace FlowerForce
+﻿namespace FlowerForce
 {
     /// <summary>
     /// Models an in-game entity.

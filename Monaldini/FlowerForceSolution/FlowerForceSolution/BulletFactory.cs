@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.Metadata;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace FlowerForce
+﻿namespace FlowerForce
 {
     /// <summary>
     /// Models a factory for <see cref="IBullet"/> entities.

@@ -1,7 +1,7 @@
 ﻿namespace FlowerForce
 {
     /// <summary>
-    /// Represents a generic <see cref="MyTimer"/> implementation.
+    /// Represents a generic <see cref="ITimer"/> implementation.
     /// </summary>
     public class MyTimer : ITimer
     {
