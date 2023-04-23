@@ -8,7 +8,7 @@ namespace FlowerForceSolution
     class Controller : IController
     {
         private readonly IWorld _world;
-        private IGame _game;
+        private IGame? _game;
 
         /// <inheritdoc />
         public int PlayerCoins
