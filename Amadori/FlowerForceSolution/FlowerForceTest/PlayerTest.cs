@@ -1,7 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Flower_Force;
-
-namespace Flower_Force_Test
+﻿namespace Flower_Force_Test
 {
     /// <summary>
     /// Test for class <see cref="Player"/>.
@@ -14,7 +11,7 @@ namespace Flower_Force_Test
         private const int SECOND_SCORE_TO_ADD = 1_500;
         private const int THIRD_SCORE_TO_ADD = 10_000;
 
-        private IPlayer _player;
+        private IPlayer? _player;
 
         /// <summary>
         /// Sets up the testing.
@@ -31,6 +28,7 @@ namespace Flower_Force_Test
         [TestMethod]
         public void TestCoins()
         {
+            Assert.IsNotNull(_player);
             int playerCoins = STARTING_COINS;
             //at first the player coins must be 0
             Assert.AreEqual(playerCoins, _player.Coins);
@@ -56,6 +54,7 @@ namespace Flower_Force_Test
         [TestMethod]
         public void TestScore()
         {
+            Assert.IsNotNull(_player);
             int playerScoreRecord = 0;
             //The initial score record must be 0
             Assert.AreEqual(playerScoreRecord, _player.ScoreRecord);
