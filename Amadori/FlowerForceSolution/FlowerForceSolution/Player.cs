@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace Flower_Force
+﻿namespace FlowerForceSolution
 {
     /// <summary>
     /// This is an implementation of <see cref="IPlayer"/>.

@@ -1,4 +1,4 @@
-﻿using Flower_Force;
+﻿using FlowerForceSolution;
 
 namespace Others
 {
@@ -11,9 +11,9 @@ namespace Others
         /// Generates a world.
         /// </summary>
         /// <param name="p">the player that plays the game</param>
-        public World(IPlayer p = null)
+        public World(IPlayer? p = null)
         {
-            Player = p != null ? p : new Player();
+            Player = p ?? new Player();
         }
 
         /// <inheritdoc />

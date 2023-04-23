@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics;
 using Others;
 
-namespace Flower_Force
+namespace FlowerForceSolution
 {
     public class GameLoop : IGameLoop
     {

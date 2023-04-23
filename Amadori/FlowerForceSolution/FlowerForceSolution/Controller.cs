@@ -1,13 +1,13 @@
 ﻿using Others;
 
-namespace Flower_Force
+namespace FlowerForceSolution
 {
     /// <summary>
     /// This is an implementation of <see cref="IController"/>.
     /// </summary>
     class Controller : IController
     {
-        private IWorld _world;
+        private readonly IWorld _world;
         private IGame _game;
 
         /// <inheritdoc />

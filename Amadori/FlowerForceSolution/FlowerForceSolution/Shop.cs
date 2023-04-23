@@ -1,9 +1,6 @@
 ﻿using Others;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 
-namespace Flower_Force
+namespace FlowerForceSolution
 {
 
     /// <summary>

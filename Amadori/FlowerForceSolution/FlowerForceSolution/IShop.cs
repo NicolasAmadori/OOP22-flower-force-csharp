@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using Others;
+﻿using Others;
 
-namespace Flower_Force
+namespace FlowerForceSolution
 {
     /// <summary>
     /// This is a shop class to show and buy new plants.
