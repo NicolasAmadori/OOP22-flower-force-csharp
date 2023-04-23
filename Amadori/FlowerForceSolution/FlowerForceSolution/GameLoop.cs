@@ -3,6 +3,9 @@ using Others;
 
 namespace FlowerForceSolution
 {
+    /// <summary>
+    /// This is an implementation of <see cref="IGameLoop"/>.
+    /// </summary>
     public class GameLoop : IGameLoop
     {
         private const long SECOND_IN_MILLISECOND = 1_000_000_000;
@@ -27,7 +30,7 @@ namespace FlowerForceSolution
             _model = model;
             _timeSlice = SECOND_IN_MILLISECOND / framesPerSecond;
             _stopwatch = Stopwatch.StartNew();
-            _lastUpdateTime = getCurrentNanoseconds();
+            _lastUpdateTime = GetCurrentNanoseconds();
         }
 
         /// <inheritdoc />
@@ -37,7 +40,7 @@ namespace FlowerForceSolution
             {
                 if (!_model.IsOver)
                 {
-                    long elapsedTime = getCurrentNanoseconds() - _lastUpdateTime;
+                    long elapsedTime = GetCurrentNanoseconds() - _lastUpdateTime;
 
                     _lastUpdateTime += elapsedTime;
                     _timeAccumulator += elapsedTime;
@@ -63,6 +66,6 @@ namespace FlowerForceSolution
             }
         }
 
-        private long getCurrentNanoseconds() => _stopwatch.ElapsedMilliseconds * 1_000_000L;
+        private long GetCurrentNanoseconds() => _stopwatch.ElapsedMilliseconds * 1_000_000L;
     }
 }

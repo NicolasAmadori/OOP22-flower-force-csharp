@@ -19,13 +19,13 @@ namespace Others
         /// <inheritdoc />
         public IGame CreateAdventureModeGame(int levelId)
         {
-            throw new System.NotImplementedException(); //Not implemented because it is not my part of the project.
+            throw new NotImplementedException(); //Not implemented because it is not my part of the project.
         }
 
         /// <inheritdoc />
         public IGame CreateSurvivalModeGame()
         {
-            throw new System.NotImplementedException(); //Not implemented because it is not my part of the project.
+            throw new NotImplementedException(); //Not implemented because it is not my part of the project.
         }
     }
 }
