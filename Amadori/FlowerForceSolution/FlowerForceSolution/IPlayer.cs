@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Flower_Force
+﻿namespace FlowerForceSolution
 {
     /// <summary>
     /// The class representing the player with all his information.

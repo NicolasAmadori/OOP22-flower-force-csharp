@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace Flower_Force
+﻿namespace FlowerForceSolution
 {
     /// <summary>
     /// This is an implementation of <see cref="IPlayer"/>.
@@ -9,7 +6,7 @@ namespace Flower_Force
     public class Player : IPlayer
     {
 
-        private ISet<int> _plantIds;
+        private readonly ISet<int> _plantIds;
         /// <inheritdoc />
         public int Coins { get; private set; }
 
@@ -24,11 +21,6 @@ namespace Flower_Force
             get
             {
                 return new HashSet<int>(_plantIds);
-            }
-
-            private set
-            {
-                _plantIds = value;
             }
         }
 
@@ -58,12 +50,12 @@ namespace Flower_Force
         /// <param name="scoreRecord">The score record the player will have.</param>
         /// <param name="lastUnlockedLevelId">The id of the last level the player will unlock.</param>
         /// <param name="plantsIds">The set of plants ids the player will have in his inventory.</param>
-        private Player(int nCoins, int scoreRecord, int lastUnlockedLevelId, ISet<int> plantsIds = null)
+        private Player(int nCoins, int scoreRecord, int lastUnlockedLevelId, ISet<int>? plantsIds = null)
         {
             Coins = nCoins;
             ScoreRecord = scoreRecord;
             LastUnlockedLevelId = lastUnlockedLevelId;
-            PlantsIds = plantsIds != null ? plantsIds : new HashSet<int>();
+            _plantIds = plantsIds ?? new HashSet<int>();
         }
 
         /// <inheritdoc />

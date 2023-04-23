@@ -1,4 +1,4 @@
-﻿namespace Flower_Force
+﻿namespace FlowerForceSolution
 {
     /// <summary>
     /// This is the class that connects the view and the model sides, making them communicate.

@@ -1,4 +1,4 @@
-﻿namespace Flower_Force
+﻿namespace FlowerForceSolution
 {
     public interface IGameLoop
     {
