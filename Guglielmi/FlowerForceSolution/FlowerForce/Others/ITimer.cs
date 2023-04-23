@@ -14,9 +14,8 @@ namespace Others
         void UpdateState();
 
         /// <summary>
-        /// 
+        /// true if the timer is ready
         /// </summary>
-        /// <value> true if timer is ready </value>
         bool Ready { get; }
 
         /// <summary>

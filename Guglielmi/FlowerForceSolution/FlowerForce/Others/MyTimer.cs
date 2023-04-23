@@ -20,17 +20,13 @@ namespace Others
         }
 
         /// <inheritdoc />
-        public bool Ready { get; private set; }
+        public bool Ready => _timerCyclesCount == 0;
 
         /// <inheritdoc />
         public void Reset() => _timerCyclesCount = 0;
 
         /// <inheritdoc />
-        public void UpdateState()
-        {
-            _timerCyclesCount = (_timerCyclesCount + 1) % _nCycles;
-            Ready = _timerCyclesCount == 0;
-        }
+        public void UpdateState() => _timerCyclesCount = (_timerCyclesCount + 1) % _nCycles;
 
         /// <inheritdoc />
         public void SetNumCycles(int newNCycles)
