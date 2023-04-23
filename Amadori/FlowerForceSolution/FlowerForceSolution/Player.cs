@@ -58,7 +58,7 @@ namespace Flower_Force
         /// <param name="scoreRecord">The score record the player will have.</param>
         /// <param name="lastUnlockedLevelId">The id of the last level the player will unlock.</param>
         /// <param name="plantsIds">The set of plants ids the player will have in his inventory.</param>
-        private Player(int nCoins, int scoreRecord, int lastUnlockedLevelId, ISet<int> plantsIds = null)
+        private Player(int nCoins, int scoreRecord, int lastUnlockedLevelId, ISet<int>? plantsIds = null)
         {
             Coins = nCoins;
             ScoreRecord = scoreRecord;
