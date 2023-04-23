@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace FlowerForce
+﻿namespace FlowerForce
 {
     /// <summary>
     /// Models a timer based on game loop's cycles, used by entities for synchronization.
