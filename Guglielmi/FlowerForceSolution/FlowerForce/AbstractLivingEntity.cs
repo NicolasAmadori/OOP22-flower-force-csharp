@@ -28,10 +28,7 @@ namespace FlowerForce
         public override bool IsOver() => Health <= 0;
 
         /// <inheritdoc />
-        public virtual void ReceiveDamage(int damage)
-        {
-            Health -= damage;
-        }
+        public virtual void ReceiveDamage(int damage) => Health -= damage;
 
         /// <inheritdoc />
         public virtual void UpdateState() => Timer.UpdateState();

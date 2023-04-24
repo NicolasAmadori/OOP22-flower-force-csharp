@@ -46,10 +46,10 @@ namespace FlowerForce
             _hordeZombie = startNumberZombieHorde;
         }
         /// <inheritdoc />
-        public int GetNumberHordeZombie() => _hordeZombie + _zombieBeforeHorde;
+        public int NumberHordeZombie => _hordeZombie + _zombieBeforeHorde;
 
         /// <inheritdoc />
-        public int GetSpawnedZombie() => _generatedZombie + _hordeGeneratedZombie;
+        public int SpawnedZombie => _generatedZombie + _hordeGeneratedZombie;
 
         /// <inheritdoc />
         public virtual Zombie? ZombieGeneration()

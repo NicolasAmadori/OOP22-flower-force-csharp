@@ -34,21 +34,21 @@ namespace TestFlowerForce
         public void ZombieGenerationTest()
         {
             //at the beginning there will be 0 zombie spawned
-            Assert.AreEqual(0, _zombieGen.GetSpawnedZombie());
+            Assert.AreEqual(0, _zombieGen.SpawnedZombie);
 
             for (int i = 0; i < TimeToSpawnZombie; i++)
             {
                 _zombieGen.ZombieGeneration();
             }
             //after waiting this amount of time, total spawned zombies will be 1
-            Assert.AreEqual(1, _zombieGen.GetSpawnedZombie());
+            Assert.AreEqual(1, _zombieGen.SpawnedZombie);
 
             for (int i = 0; i < TimeToSpawnZombie; i++)
             {
                 _zombieGen.ZombieGeneration();
             }
             //after waiting this amount of time, total spawned zombies will be 2
-            Assert.AreEqual(2, _zombieGen.GetSpawnedZombie());
+            Assert.AreEqual(2, _zombieGen.SpawnedZombie);
         }
 
         /// <summary>
@@ -58,16 +58,16 @@ namespace TestFlowerForce
         public void testIncreaseHorde()
         {
             //the first wave of zombies consists of 8 zombies + 5 horde zombies
-            Assert.AreEqual(FirstZombieHorde, _zombieGenInfinite.GetNumberHordeZombie());
+            Assert.AreEqual(FirstZombieHorde, _zombieGenInfinite.NumberHordeZombie);
 
-            while (_zombieGenInfinite.GetSpawnedZombie() != FirstZombieHorde)
+            while (_zombieGenInfinite.SpawnedZombie != FirstZombieHorde)
             {
                 _zombieGenInfinite.ZombieGeneration();
             }
 
             //the second wave of zombies consists of 8 zombies + 10 horde zombies,
             //because the horde increases by 5
-            Assert.AreEqual(SecondZombieHorde, _zombieGenInfinite.GetNumberHordeZombie());
+            Assert.AreEqual(SecondZombieHorde, _zombieGenInfinite.NumberHordeZombie);
         }
     }
 }

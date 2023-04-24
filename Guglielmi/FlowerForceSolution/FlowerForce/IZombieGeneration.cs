@@ -16,12 +16,12 @@ namespace FlowerForce
         /// 
         /// </summary>
         /// <returns> the number of spawned zombie </returns>
-        int GetSpawnedZombie();
+        int SpawnedZombie { get; }
 
         /// <summary>
         /// 
         /// </summary>
         /// <returns> the number of the next horde zombie </returns>
-        int GetNumberHordeZombie();
+        int NumberHordeZombie { get; }
     }
 }
